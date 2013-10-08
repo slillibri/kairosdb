@@ -18,6 +18,15 @@ package "kairosdb" do
 end
 
 # add configuration
+template "/opt/local/kairosdb/conf/kairosdb.properties" do
+  mode 0644
+  owner "root"
+  group "root"
+  variables node['kairosdb']
+  # notifies :restart, 'service[kairosdb]', :immediately
+end
+
+#  
 
 # add smf
 
