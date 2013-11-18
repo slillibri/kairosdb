@@ -9,7 +9,7 @@
 #
 
 package "openjdk7" do
-  version "1.7.21nb3"
+  version "1.7.25nb2"
 end
 
 package "kairosdb" do
