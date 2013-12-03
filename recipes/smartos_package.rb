@@ -8,11 +8,7 @@
 # See 'LICENSE'
 #
 
-package "openjdk7" do
-  version "1.7.25nb2"
-end
-
-package "kairosdb" do
+package "pbe-kairosdb" do
   version node['kairosdb']['version']
   action :install
 end
@@ -25,8 +21,6 @@ template "/opt/local/kairosdb/conf/kairosdb.properties" do
   variables node['kairosdb']
   # notifies :restart, 'service[kairosdb]', :immediately
 end
-
-#  
 
 # add smf
 
