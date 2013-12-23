@@ -13,6 +13,8 @@ package "pbe-kairosdb" do
   action :install
 end
 
+directory "/opt/local/kairosdb/conf"
+
 # add configuration
 template "/opt/local/kairosdb/conf/kairosdb.properties" do
   mode 0644
