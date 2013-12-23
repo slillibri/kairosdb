@@ -26,10 +26,6 @@ template "/opt/local/kairosdb/conf/kairosdb.properties" do
   # notifies :restart, 'service[kairosdb]', :immediately
 end
 
-# add smf
-
-# add service start
-# TEMPORARY until smf
-execute "start kairos" do 
-  command "/opt/local/kairosdb/bin/kairosdb.sh start"
+service 'kairosdb' do 
+  action [:enable, :start]
 end
