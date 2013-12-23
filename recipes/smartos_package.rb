@@ -13,7 +13,9 @@ package "pbe-kairosdb" do
   action :install
 end
 
-directory "/opt/local/kairosdb/conf"
+directory "/opt/local/kairosdb/conf" do 
+  recursive true
+end
 
 # add configuration
 template "/opt/local/kairosdb/conf/kairosdb.properties" do
